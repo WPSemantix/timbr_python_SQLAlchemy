@@ -12,4 +12,4 @@ This is a sample repository for how to connect to timbr using SQLAlchemy and Pyt
 - Run the following command to install the Python dependencies: `pip install -r requirements.txt`
 
 ## Sample usage
-- For an example of how to use the Python connector for Tibmr, follow this [Example file](example.py) 
+- For an example of how to use the Python connector for Tibmr, follow this [example file](example.py) 
