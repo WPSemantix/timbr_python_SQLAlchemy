@@ -6,6 +6,7 @@ This is a sample repository for how to connect to timbr using SQLAlchemy and Pyt
 ## Dependencies
 - Access to a timbr-server
 - Python from 3.7.13 or newer
+- Pre-built sasl dependency (for windows: `pip install https://download.lfd.uci.edu/pythonlibs/archived/cp37/sasl-0.3.1-cp37-cp37m-win_amd64.whl`)
 
 ## Installation
 - Install Python: https://www.python.org/downloads/release/python-3713/
