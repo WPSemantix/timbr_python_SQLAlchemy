@@ -22,8 +22,8 @@ from sqlalchemy.engine import default
 from sqlalchemy.sql import compiler
 from sqlalchemy.sql.compiler import SQLCompiler
 
-from pytimbrsqlalchemy import hive
-from pytimbrsqlalchemy.common import UniversalSet
+from pytimbr_sqla import hive
+from pytimbr_sqla.common import UniversalSet
 
 from dateutil.parser import parse
 from decimal import Decimal

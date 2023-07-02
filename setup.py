@@ -4,20 +4,20 @@ with open("README.md", "r", encoding="utf-8") as fh:
   long_description = fh.read()
 
 setuptools.setup(
-  name='pytimbrsqlalchemy',
+  name='pytimbr_sqla',
   version='1.0.0',
   author='timbr',
   author_email='contact@timbr.ai',
   description='Timbr Python connector',
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url='https://github.com/DorEliyahu176/timbr_python_SQLAlchemy',
-  download_url = 'https://github.com/DorEliyahu176/timbr_python_SQLAlchemy/archive/refs/tags/v1.0.0.tar.gz',
+  url='https://github.com/WPSemantix/timbr_python_SQLAlchemy',
+  download_url = 'https://github.com/WPSemantix/timbr_python_SQLAlchemy/archive/refs/tags/v1.0.0.tar.gz',
   project_urls={
-    "Bug Tracker": "https://github.com/DorEliyahu176/timbr_python_SQLAlchemy/issues"
+    "Bug Tracker": "https://github.com/WPSemantix/timbr_python_SQLAlchemy/issues"
   },
   license='MIT',
-  packages=['pytimbrsqlalchemy', 'TCLIService'],
+  packages=['pytimbr_sqla', 'TCLIService'],
   install_requires=[
     'future',
     'python-dateutil',
@@ -38,6 +38,15 @@ setuptools.setup(
     'pytimbr',
     'py-timbr',
     'Py-Timbr',
+    'pytimbr_sqla',
+    'pytimbr_Sqla',
+    'PyTimbr_Sqla',
+    'pytimbr_SQla',
+    'PyTimbr_SQla',
+    'pytimbr_SQLa',
+    'PyTimbr_SQLa',
+    'pytimbr_SQlA',
+    'PyTimbr_SQLA',
     'pytimbrsqlalchemy',
     'PyTimbrSqlalchemy',
     'PyTimbrSQlalchemy',
@@ -60,9 +69,9 @@ setuptools.setup(
   ],
   entry_points={
     'sqlalchemy.dialects': [
-      'timbr = pytimbrsqlalchemy.sqlalchemy_timbr:TimbrDialect',
-      "timbr.http = pytimbrsqlalchemy.sqlalchemy_timbr:TimbrHTTPDialect",
-      "timbr.https = pytimbrsqlalchemy.sqlalchemy_timbr:TimbrHTTPSDialect",
+      'timbr = pytimbr_sqla.sqlalchemy_timbr:TimbrDialect',
+      "timbr.http = pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPDialect",
+      "timbr.https = pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPSDialect",
     ],
   }
 )

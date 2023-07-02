@@ -21,7 +21,7 @@ If you encounter a problem installing `PyHive` with sasl dependencies on windows
 
 ## Connect options
 
-### Connect using 'pytimbrsqlalchemy' and 'SQLAlchemy' packages
+### Connect using 'pytimbr_sqla' and 'SQLAlchemy' packages
 ```python
   from sqlalchemy import create_engine
 
@@ -48,6 +48,8 @@ If you encounter a problem installing `PyHive` with sasl dependencies on windows
   for concept in concepts:
     print(concept)
 ```
+### Attention:
+### timbr works only as async when running a query, if you want to use standard PyHive you have two options
 
 ### Connect using 'PyHive' and 'SQLAlchemy' packages
 

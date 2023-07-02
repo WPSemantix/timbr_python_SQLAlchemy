@@ -18,10 +18,10 @@ from ssl import CERT_NONE, CERT_OPTIONAL, CERT_REQUIRED, create_default_context
 from TCLIService import TCLIService
 from TCLIService import constants
 from TCLIService import ttypes
-from pytimbrsqlalchemy import common
-from pytimbrsqlalchemy.common import DBAPITypeObject
+from pytimbr_sqla import common
+from pytimbr_sqla.common import DBAPITypeObject
 # Make all exceptions visible in this module per DB-API
-from pytimbrsqlalchemy.exc import *  # noqa
+from pytimbr_sqla.exc import *  # noqa
 from builtins import range
 import contextlib
 from future.utils import iteritems

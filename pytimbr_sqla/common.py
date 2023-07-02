@@ -10,7 +10,7 @@ from builtins import int
 from builtins import object
 from builtins import str
 from past.builtins import basestring
-from pytimbrsqlalchemy import exc
+from pytimbr_sqla import exc
 import abc
 import collections
 import time
