@@ -25,7 +25,7 @@ setuptools.setup(
     'thrift>=0.10.0',
     'thrift_sasl>=0.1.0',
     'pure-sasl>=0.6.2',
-    'sqlalchemy=1.4.49',
+    'sqlalchemy==1.4.49',
     'requests_kerberos>=0.12.0',
   ],
   extras_require={},
