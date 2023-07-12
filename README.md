@@ -6,6 +6,7 @@ This is a sample repository for how to connect to timbr using SQLAlchemy and Pyt
 ## Dependencies
 - Access to a timbr-server
 - Python from 3.7.13 or newer
+- Support SQLAlchemy 1.4.x but not support version 2.x yet.
 
 ## Installation
 - Install as clone repository:
