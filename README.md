@@ -17,7 +17,7 @@ This is a sample repository for how to connect to timbr using SQLAlchemy and Pyt
   - `pip install git+https://github.com/WPSemantix/timbr_python_SQLAlchemy`
 
 - Install using pip:
-  - `pip install pytimbr_sqla`
+  - `pip install pytimbr-sqla`
 
 ## Known issues
 If you encounter a problem installing `PyHive` with sasl dependencies on windows, install the following wheel (for 64bit Windows) by running:
