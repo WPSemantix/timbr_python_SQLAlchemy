@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
   name='pytimbr_sqla',
-  version='1.0.0',
+  version='1.0.1',
   author='timbr',
   author_email='contact@timbr.ai',
   description='Timbr Python connector',
