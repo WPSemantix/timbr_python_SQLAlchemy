@@ -1,4 +1,4 @@
-![Timbr logo description](Timbr_logo.png)
+![Timbr logo](https://timbr.ai/wp-content/uploads/2023/06/timbr-ai-l-5-226x60-1.png)
 
 # timbr Python connector sample file
 This is a sample repository for how to connect to timbr using SQLAlchemy and Python.
