@@ -24,6 +24,10 @@ If you encounter a problem installing `PyHive` with sasl dependencies on windows
 
 `pip install https://download.lfd.uci.edu/pythonlibs/archived/cp37/sasl-0.3.1-cp37-cp37m-win_amd64.whl`
 
+For Python 3.9:
+
+`pip install https://download.lfd.uci.edu/pythonlibs/archived/sasl-0.3.1-cp39-cp39-win_amd64.whl`
+
 ## Sample usage
 - For an example of how to use the Python connector for timbr, follow this [example file](example.py)
 
