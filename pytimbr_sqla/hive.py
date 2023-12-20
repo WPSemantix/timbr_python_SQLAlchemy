@@ -608,3 +608,6 @@ def _check_status(response):
     _logger.debug(response)
     if response.status.statusCode != ttypes.TStatusCode.SUCCESS_STATUS:
         raise OperationalError(response)
+
+    if hasattr(response, 'errorMessage') and response.errorMessage is not None and response.errorMessage != '':
+        raise Exception(response.errorMessage)
