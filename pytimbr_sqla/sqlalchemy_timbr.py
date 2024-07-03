@@ -255,7 +255,7 @@ class TimbrDialect(default.DefaultDialect):
     def create_connect_args(self, url):
         kwargs = {
             'host': url.host,
-            'port': url.port or 10000,
+            'port': url.port or 11000,
             'username': url.username,
             'password': url.password,
             'database': url.database or 'default',
@@ -385,7 +385,7 @@ class TimbrHTTPDialect(TimbrDialect):
     def create_connect_args(self, url):
         kwargs = {
             "host": url.host,
-            "port": url.port or 10000,
+            "port": url.port or 11000,
             "scheme": self.scheme,
             "username": url.username or None,
             "password": url.password or None,
