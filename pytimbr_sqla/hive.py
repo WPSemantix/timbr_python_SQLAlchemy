@@ -186,7 +186,7 @@ class Connection(object):
                 ssl_cert = ssl_cert or "none"
                 ssl_context.verify_mode = ssl_cert_parameter_map.get(ssl_cert, CERT_NONE)
             thrift_transport = thrift.transport.THttpClient.THttpClient(
-                uri_or_host="{scheme}://{host}:{port}/cliservice/".format(
+                uri_or_host="{scheme}://{host}:{port}/timbr-server/".format(
                     scheme=scheme, host=host, port=port
                 ),
                 ssl_context=ssl_context,
