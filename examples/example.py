@@ -36,14 +36,14 @@ if __name__ == '__main__':
 
   # Create new sqlalchemy connection
   engine = create_engine(f"timbr+{protocol}://{username}@{ontology}:{password}@{hostname}:{port}")
-  
+
   # Connect to the created engine
   conn = engine.connect()
-  
+
   # Execute a query
   query = "SHOW CONCEPTS"
   concepts = conn.execute(query).fetchall()
-  
+
   # Display the results of the execution
   for concept in concepts:
     print(concept)

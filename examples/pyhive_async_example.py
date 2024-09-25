@@ -11,6 +11,13 @@ if __name__ == '__main__':
   protocol = '<http/https>'
   username = '<TIMBR_USER/token>'
   password = '<TIMBR_PASSWORD/TOKEN_VALUE>'
+  connect_args = {
+    'configuration': {
+      'set:hiveconf:hiveMetadata': 'true',
+      'set:hiveconf:active_datasource': '<datasource_name>',
+      'set:hiveconf:queryTimeout': '<TIMEOUT_IN_SECONDS>',
+    },
+  }
 
   # hostname - The IP / Hostname of the Timbr server (not necessarily the hostname of the Timbr platform).
   # port - The port to connect to in the Timbr server. Timbr's default port with enabled_ssl is 443 without SSL is 11000.
@@ -18,6 +25,7 @@ if __name__ == '__main__':
   # protocol - Connection protocol can be 'http' or 'https'.
   # username - Use 'token' as the username when connecting using a Timbr token, otherwise use the user name.
   # password - If using a token as a username then the pass is the token value, otherwise its the user's password.
+  # connect_args - The connection special arguments for extra customization. The only argument you must have is the first one (set:hiveconf:hiveMetadata) the others are optional.
 
   # HTTP example
   hostname = 'mytimbrenv.com'
@@ -26,6 +34,11 @@ if __name__ == '__main__':
   protocol = 'http'
   username = 'timbr'
   password = 'StrongPassword'
+  connect_args = {
+    'configuration': {
+      'set:hiveconf:hiveMetadata': 'true',
+    },
+  }
 
   # HTTPS example
   hostname = 'mytimbrenv.com'
@@ -34,9 +47,14 @@ if __name__ == '__main__':
   protocol = 'https'
   username = 'timbr'
   password = 'StrongPassword'
+  connect_args = {
+    'configuration': {
+      'set:hiveconf:hiveMetadata': 'true',
+    },
+  }
 
   # Create new sqlalchemy connection
-  engine = create_engine(f"hive+{protocol}://{username}@{ontology}:{password}@{hostname}:{port}", connect_args={'configuration': {'set:hiveconf:hiveMetadata': 'true'}})
+  engine = create_engine(f"hive+{protocol}://{username}@{ontology}:{password}@{hostname}:{port}", connect_args = connect_args)
 
   # Connect to the created engine
   conn = engine.connect()
