@@ -1,12 +1,23 @@
 ![Timbr logo](https://timbr.ai/wp-content/uploads/2023/06/timbr-ai-l-5-226x60-1.png)
 
-# timbr Python connector sample file
-This is a sample repository for how to connect to timbr using SQLAlchemy and Python.
+# timbr Python connector using SQLAlchemy
+This project is a python connector to timbr using SQLAlchemy.
 
 ## Dependencies
 - Access to a timbr-server
 - Python from 3.7.13 or newer
 - Support SQLAlchemy 1.4.36 or newer but not version 2.x yet.
+- For <b>Linux</b> based machines only install those dependencies first:
+  - gcc
+  - heimdal-dev
+  - krb5
+  - python-devel
+  - python-dev
+  - python-all-dev
+  - libsasl2-dev
+- Ubuntu example:
+    - apt install gcc, heimdal-dev, krb5, python-devel, python-dev, python-all-dev, libsasl2-dev
+
 
 ## Installation
 - Install as clone repository:
@@ -125,11 +136,16 @@ For Python 3.9:
 
   # Execute a query
   query = "SHOW CONCEPTS"
-  concepts = conn.execute(query).fetchall()
+  res_obj = conn.execute(query)
+  results_headers = [(desc[0], desc[1]) for desc in res_obj.cursor.description]
+  results = res_obj.fetchall()
 
-  # Display the results of the execution
-  for concept in concepts:
-    print(concept)
+  # Print the columns name
+  for name, col_type in results_headers:
+    print(f"{name} - {col_type}")
+  # Print the results
+  for result in results:
+    print(result)
 ```
 ### Attention:
 ### timbr works only as async when running a query, if you want to use standard PyHive you have two options
@@ -182,9 +198,17 @@ For Python 3.9:
   while status in (TOperationState.INITIALIZED_STATE, TOperationState.RUNNING_STATE):
     status = cursor.poll().operationState
 
-  # Display the results of the execution
+  # Get the results of the execution
+  results_headers = [(desc[0], desc[1]) for desc in cursor.description]
   results = cursor.fetchall()
-  print(results)
+
+  # Display the results of the execution
+  # Print the columns name
+  for name, col_type in results_headers:
+    print(f"{name} - {col_type}")
+  # Print the results
+  for result in results:
+    print(result)
 ```
 
 #### Connect using PyHive Sync Query
@@ -223,10 +247,16 @@ For Python 3.9:
   # Connect to the created engine
   conn = engine.connect()
 
-  # Use the connection to execute a query
+  # Execute a query
   query = "SHOW CONCEPTS"
-  results = conn.execute(query).fetchall()
+  res_obj = conn.execute(query)
+  results_headers = [(desc[0], desc[1]) for desc in res_obj.cursor.description]
+  results = res_obj.fetchall()
 
-  # Display the results of the execution
-  print(results)
+  # Print the columns name
+  for name, col_type in results_headers:
+    print(f"{name} - {col_type}")
+  # Print the results
+  for result in results:
+    print(result)
 ```

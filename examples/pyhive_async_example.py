@@ -70,6 +70,14 @@ if __name__ == '__main__':
   while status in (TOperationState.INITIALIZED_STATE, TOperationState.RUNNING_STATE):
     status = cursor.poll().operationState
 
-  # Display the results of the execution
+  # Get the results of the execution
+  results_headers = [(desc[0], desc[1]) for desc in cursor.description]
   results = cursor.fetchall()
-  print(results)
+
+  # Display the results of the execution
+  # Print the columns name
+  for name, col_type in results_headers:
+    print(f"{name} - {col_type}")
+  # Print the results
+  for result in results:
+    print(result)

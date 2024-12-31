@@ -62,9 +62,15 @@ if __name__ == '__main__':
   # Connect to the created engine
   conn = engine.connect()
 
-  # Use the connection to execute a query
+  # Execute a query
   query = "SHOW CONCEPTS"
-  results = conn.execute(query).fetchall()
+  res_obj = conn.execute(query)
+  results_headers = [(desc[0], desc[1]) for desc in res_obj.cursor.description]
+  results = res_obj.fetchall()
 
-  # Display the results of the execution
-  print(results)
+  # Print the columns name
+  for name, col_type in results_headers:
+    print(f"{name} - {col_type}")
+  # Print the results
+  for result in results:
+    print(result)
