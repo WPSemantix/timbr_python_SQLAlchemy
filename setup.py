@@ -22,7 +22,7 @@ setuptools.setup(
     'future',
     'python-dateutil',
     'sasl>=0.2.1',
-    'thrift>=0.10.0',
+    'thrift>=0.13.0',
     'thrift_sasl>=0.1.0',
     'pure-sasl>=0.6.2',
     'sqlalchemy>=1.4.36,<2.0.0',
