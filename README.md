@@ -1,15 +1,13 @@
 ![Timbr logo](https://timbr.ai/wp-content/uploads/2023/06/timbr-ai-l-5-226x60-1.png)
 
-[![license-MIT](https://img.shields.io/github/license/WPSemantix/timbr_python_SQLAlchemy)](https://github.com/WPSemantix/timbr_python_SQLAlchemy/blob/main/licenses/LICENSE-MIT)
-[![license-Apache-2.0](https://img.shields.io/github/license/WPSemantix/timbr_python_SQLAlchemy)](https://github.com/WPSemantix/timbr_python_SQLAlchemy/blob/main/licenses/LICENSE-Apache-2.0)
-[![license-GPL-2.0-only](https://img.shields.io/github/license/WPSemantix/timbr_python_SQLAlchemy)](https://github.com/WPSemantix/timbr_python_SQLAlchemy/blob/main/licenses/LICENSE-GPL-2.0-only)
-[![PypiVersion](https://img.shields.io/pypi/v/pytimbr-sqla.svg)](https://badge.fury.io/py/pytimbr-sqla)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy.svg?type=shield&issueType=license)](https://app.fossa.com/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy?ref=badge_shield&issueType=license)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy.svg?type=shield&issueType=security)](https://app.fossa.com/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy?ref=badge_shield&issueType=security)
 
 [![Python 3.7.13](https://img.shields.io/badge/python-3.7.13+-blue.svg)](https://www.python.org/downloads/release/python-3713/)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-3820/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-3921/)
+
+[![PypiVersion](https://img.shields.io/pypi/v/pytimbr-sqla.svg)](https://badge.fury.io/py/pytimbr-sqla)
 
 # timbr Python connector using SQLAlchemy
 This project is a python connector to timbr using SQLAlchemy.
