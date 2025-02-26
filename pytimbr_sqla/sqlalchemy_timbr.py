@@ -345,9 +345,15 @@ class TimbrDialect(default.DefaultDialect):
         rows = [[col.strip() if col else None for col in row] for row in rows]
         # Filter out empty rows and comment
         rows = [row for row in rows if row[0] and row[0] != '# col_name']
+
+        i = None
         for i, (col_name, _col_type, _comment) in enumerate(rows):
             if col_name == '# Partition Information':
                 break
+        
+        if i is None:
+            return []
+
         # Handle partition columns
         col_names = []
         for col_name, _col_type, _comment in rows[i + 1:]:
