@@ -1,4 +1,4 @@
-﻿future==0.18.2
+﻿future==0.18.3
 python-dateutil==2.8.2
 sasl>=0.2.1
 thrift>=0.13.0
