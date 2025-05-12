@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
   name='pytimbr_sqla',
-  version='1.0.7',
+  version='2.0.0-rc2',
   author='timbr',
   author_email='contact@timbr.ai',
   description='Timbr Python SQLAlchemy connector',
@@ -17,16 +17,15 @@ setuptools.setup(
     "Bug Tracker": "https://github.com/WPSemantix/timbr_python_SQLAlchemy/issues"
   },
   license='MIT',
-  packages=['pytimbr_sqla', 'TCLIService'],
+  packages=['pytimbr_sqla', 'TCLIService', 'thrift', 'thrift.transport'],
   install_requires=[
-    'future',
-    'python-dateutil',
-    'sasl>=0.2.1',
-    'thrift>=0.13.0',
-    'thrift_sasl>=0.1.0',
+    'future==1.0.0',
+    'python-dateutil==2.9.0',
+    'ldap3',
+    'thrift_sasl==0.4.3',
     'pure-sasl>=0.6.2',
     'sqlalchemy>=1.4.36,<2.0.0',
-    'requests_kerberos>=0.12.0',
+    'requests_kerberos==0.15.0',
   ],
   extras_require={},
   package_data={},
@@ -67,6 +66,10 @@ setuptools.setup(
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
   ],
   entry_points={
     'sqlalchemy.dialects': [

@@ -1,8 +1,9 @@
-﻿future==0.18.3
-python-dateutil==2.8.2
-sasl>=0.2.1
-thrift>=0.13.0
-thrift_sasl>=0.1.0
+﻿future==1.0.0
+python-dateutil==2.9.0
+# sasl>=0.2.1
+ldap3
+thrift==0.21.0
+thrift_sasl==0.4.3
 pure-sasl>=0.6.2
 sqlalchemy>=1.4.36,<2.0.0
-requests_kerberos>=0.12.0
+requests_kerberos==0.15.0
