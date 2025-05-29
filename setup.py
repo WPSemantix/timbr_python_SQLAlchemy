@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
   name='pytimbr_sqla',
-  version='2.0.0-rc2',
+  version='2.0.0',
   author='timbr',
   author_email='contact@timbr.ai',
   description='Timbr Python SQLAlchemy connector',
   long_description=long_description,
   long_description_content_type="text/markdown",
   url='https://github.com/WPSemantix/timbr_python_SQLAlchemy',
-  download_url = 'https://github.com/WPSemantix/timbr_python_SQLAlchemy/archive/refs/tags/v1.0.7.tar.gz',
+  download_url = 'https://github.com/WPSemantix/timbr_python_SQLAlchemy/archive/refs/tags/v2.0.0.tar.gz',
   project_urls={
     "Bug Tracker": "https://github.com/WPSemantix/timbr_python_SQLAlchemy/issues"
   },
@@ -26,6 +26,7 @@ setuptools.setup(
     'pure-sasl>=0.6.2',
     'sqlalchemy>=1.4.36,<2.0.0',
     'requests_kerberos==0.15.0',
+    'pyhive==0.7.0',
   ],
   extras_require={},
   package_data={},
@@ -63,9 +64,6 @@ setuptools.setup(
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.7',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',

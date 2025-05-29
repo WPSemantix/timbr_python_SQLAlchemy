@@ -1,6 +1,5 @@
 ﻿future==1.0.0
 python-dateutil==2.9.0
-# sasl>=0.2.1
 ldap3
 thrift==0.21.0
 thrift_sasl==0.4.3
