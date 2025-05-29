@@ -51,8 +51,9 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-test.py
-test/
+test/env*
+test/.python-version
+test/.env
 
 # Translations
 *.mo
