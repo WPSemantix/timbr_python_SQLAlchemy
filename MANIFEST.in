@@ -1,1 +1,2 @@
 include examples/*
+include thrift/transport/THttpClient.py

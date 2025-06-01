@@ -1,11 +1,12 @@
-![Timbr logo](https://timbr.ai/wp-content/uploads/2023/06/timbr-ai-l-5-226x60-1.png)
+![Timbr logo](https://timbr.ai/wp-content/uploads/2025/01/logotimbrai230125.png)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy.svg?type=shield&issueType=license)](https://app.fossa.com/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy?ref=badge_shield&issueType=license)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy.svg?type=shield&issueType=security)](https://app.fossa.com/projects/custom%2B50508%2Fgithub.com%2FWPSemantix%2Ftimbr_python_SQLAlchemy?ref=badge_shield&issueType=security)
 
-[![Python 3.7.13](https://img.shields.io/badge/python-3.7.13+-blue.svg)](https://www.python.org/downloads/release/python-3713/)
-[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-3820/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-3921/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-31017/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-31112/)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3129/)
 
 [![PypiVersion](https://img.shields.io/pypi/v/pytimbr-sqla.svg)](https://badge.fury.io/py/pytimbr-sqla)
 
@@ -14,7 +15,7 @@ This project is a python connector to timbr using SQLAlchemy.
 
 ## Dependencies
 - Access to a timbr-server
-- Python from 3.7.13 or newer
+- Python from 3.9.13 or newer
 - Support SQLAlchemy 1.4.36 or newer but not version 2.x yet.
 - For <b>Linux</b> based machines only install those dependencies first:
   - gcc
@@ -27,10 +28,9 @@ This project is a python connector to timbr using SQLAlchemy.
 - Ubuntu example:
   - apt install gcc, heimdal-dev, krb5, python-devel, python-dev, python-all-dev, libsasl2-dev
 
-
 ## Installation
 - Install as clone repository:
-  - Install Python: https://www.python.org/downloads/release/python-3713/
+  - Install Python: https://www.python.org/downloads/release/python-3913/
   - Run the following command to install the Python dependencies: `pip install -r requirements.txt`
 
 - Install using pip and git:
@@ -38,15 +38,6 @@ This project is a python connector to timbr using SQLAlchemy.
 
 - Install using pip:
   - `pip install pytimbr-sqla`
-
-## Known issues
-If you encounter a problem installing `PyHive` with sasl dependencies on windows, install the following wheel (for 64bit Windows) by running:
-
-`pip install https://download.lfd.uci.edu/pythonlibs/archived/cp37/sasl-0.3.1-cp37-cp37m-win_amd64.whl`
-
-For Python 3.9:
-
-`pip install https://download.lfd.uci.edu/pythonlibs/archived/sasl-0.3.1-cp39-cp39-win_amd64.whl`
 
 ## Sample usage
 - For an example of how to use the Python SQLAlchemy connector for timbr, follow this [example file](examples/example.py)
