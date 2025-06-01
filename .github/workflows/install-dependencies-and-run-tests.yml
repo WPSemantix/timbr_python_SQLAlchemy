@@ -17,6 +17,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Install Linux dependencies
+      run: |
+        sudo apt install -y gcc, heimdal-dev, krb5, python-devel, python-dev, python-all-dev, libsasl2-dev
+    - name: Update pip version
+      run: |
+        python -m pip install --upgrade pip
     - name: Install dependencies
       run: |
         pip install -r test/requirements.txt
