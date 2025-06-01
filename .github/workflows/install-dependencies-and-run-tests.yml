@@ -39,5 +39,13 @@ jobs:
       run: |
         pip install dist/*.tar.gz
     - name: Test with pytest
+      env:
+        HOSTNAME: ${{ secrets.HOSTNAME }}
+        PORT: ${{ secrets.PORT }}
+        PROTOCOL: ${{ secrets.PROTOCOL }}
+        ONTOLOGY: ${{ secrets.ONTOLOGY }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        CONNECT_ARGS: ${{ secrets.CONNECT_ARGS }}
       run: |
         pytest
