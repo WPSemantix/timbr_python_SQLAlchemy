@@ -1,3 +1,90 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytimbr_sqla"
+version = "2.0.0"
+description = "Timbr Python SQLAlchemy connector"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  {name = "timbr", email = "contact@timbr.ai"}
+]
+maintainers = [
+  {name = "timbr", email = "contact@timbr.ai"}
+]
+keywords = [
+  "timbr",
+  "timbr-python",
+  "timbr-connector",
+  "python-connector",
+  "PyTimbr",
+  "pytimbr",
+  "py-timbr",
+  "Py-Timbr",
+  "pytimbr_sqla",
+  "pytimbr_Sqla",
+  "PyTimbr_Sqla",
+  "pytimbr_SQla",
+  "PyTimbr_SQla",
+  "pytimbr_SQLa",
+  "PyTimbr_SQLa",
+  "pytimbr_SQlA",
+  "PyTimbr_SQLA",
+  "pytimbrsqlalchemy",
+  "PyTimbrSqlalchemy",
+  "PyTimbrSQlalchemy",
+  "PyTimbrSQLalchemy",
+  "PyTimbrSQLAlchemy",
+  "Py-TimbrSQLAlchemy",
+  "py-timbrsqlalchemy",
+  "Py-Timbr-SQLAlchemy",
+  "py-timbr-sqlalchemy"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+requires-python = ">=3.9"
+dependencies = [
+  "future==1.0.0",
+  "python-dateutil==2.9.0",
+  "ldap3",
+  "thrift_sasl==0.4.3",
+  "pure-sasl>=0.6.2",
+  "sqlalchemy>=1.4.36,<2.0.0",
+  "requests_kerberos==0.15.0",
+  "pyhive==0.7.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/WPSemantix/timbr_python_SQLAlchemy"
+Download = "https://github.com/WPSemantix/timbr_python_SQLAlchemy/archive/refs/tags/v2.0.0.tar.gz"
+"Bug Tracker" = "https://github.com/WPSemantix/timbr_python_SQLAlchemy/issues"
+Repository = "https://github.com/WPSemantix/timbr_python_SQLAlchemy"
+
+[project.entry-points."sqlalchemy.dialects"]
+timbr = "pytimbr_sqla.sqlalchemy_timbr:TimbrDialect"
+"timbr.http" = "pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPDialect"
+"timbr.https" = "pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPSDialect"
+
+[tool.setuptools.packages.find]
+include = ["pytimbr_sqla*", "TCLIService*", "thrift*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
+"thrift.transport" = ["*.py"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.exclude-package-data]
+"*" = ["test*", "tests*", "*.pyc", "__pycache__"]
