@@ -7,7 +7,7 @@ name = "pytimbr_sqla"
 dynamic = ["version"]
 description = "Timbr Python SQLAlchemy connector"
 readme = "README.md"
-license = {text = "MIT"}
+license-files = ["LICENSE", "licenses/*"]
 authors = [
   {name = "timbr", email = "contact@timbr.ai"}
 ]
@@ -47,6 +47,10 @@ classifiers = [
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Build Tools",
   "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache Software License",
+  "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
