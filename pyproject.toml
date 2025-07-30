@@ -46,11 +46,6 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Build Tools",
-  "License :: OSI Approved :: MIT License",
-  "License :: OSI Approved :: Apache Software License",
-  "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-  "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
@@ -59,14 +54,15 @@ classifiers = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-  "future==1.0.0",
-  "python-dateutil==2.9.0",
+  "future>=0.18.2",
+  "python-dateutil>=2.8.2",
   "ldap3",
-  "thrift_sasl==0.4.3",
+  "thrift>=0.16.0",
+  "thrift_sasl>=0.4.3",
   "pure-sasl>=0.6.2",
   "sqlalchemy>=1.4.36,<2.0.0",
-  "requests_kerberos==0.15.0",
-  "pyhive==0.7.0"
+  "requests_kerberos>=0.12.0",
+  "pyhive>=0.7.0"
 ]
 
 [project.urls]
