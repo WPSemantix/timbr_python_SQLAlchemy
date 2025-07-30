@@ -366,7 +366,7 @@ class Cursor(common.DBAPICursor):
     visible by other cursors or connections.
     """
 
-    def __init__(self, connection, arraysize=1000):
+    def __init__(self, connection, arraysize=10000):
         self._operationHandle = None
         super(Cursor, self).__init__()
         self._arraysize = arraysize
@@ -391,7 +391,7 @@ class Cursor(common.DBAPICursor):
     @arraysize.setter
     def arraysize(self, value):
         """Array size cannot be None, and should be an integer"""
-        default_arraysize = 1000
+        default_arraysize = 10000
         try:
             self._arraysize = int(value) or default_arraysize
         except TypeError:
