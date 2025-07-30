@@ -1,3 +1,98 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytimbr_sqla"
+dynamic = ["version"]
+description = "Timbr Python SQLAlchemy connector"
+readme = "README.md"
+license-files = ["LICENSE", "licenses/*"]
+authors = [
+  {name = "timbr", email = "contact@timbr.ai"}
+]
+maintainers = [
+  {name = "timbr", email = "contact@timbr.ai"}
+]
+keywords = [
+  "timbr",
+  "timbr-python",
+  "timbr-connector",
+  "python-connector",
+  "PyTimbr",
+  "pytimbr",
+  "py-timbr",
+  "Py-Timbr",
+  "pytimbr_sqla",
+  "pytimbr_Sqla",
+  "PyTimbr_Sqla",
+  "pytimbr_SQla",
+  "PyTimbr_SQla",
+  "pytimbr_SQLa",
+  "PyTimbr_SQLa",
+  "pytimbr_SQlA",
+  "PyTimbr_SQLA",
+  "pytimbrsqlalchemy",
+  "PyTimbrSqlalchemy",
+  "PyTimbrSQlalchemy",
+  "PyTimbrSQLalchemy",
+  "PyTimbrSQLAlchemy",
+  "Py-TimbrSQLAlchemy",
+  "py-timbrsqlalchemy",
+  "Py-Timbr-SQLAlchemy",
+  "py-timbr-sqlalchemy"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache Software License",
+  "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+requires-python = ">=3.9"
+dependencies = [
+  "future==1.0.0",
+  "python-dateutil==2.9.0",
+  "ldap3",
+  "thrift_sasl==0.4.3",
+  "pure-sasl>=0.6.2",
+  "sqlalchemy>=1.4.36,<2.0.0",
+  "requests_kerberos==0.15.0",
+  "pyhive==0.7.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/WPSemantix/timbr_python_SQLAlchemy"
+Download = "https://github.com/WPSemantix/timbr_python_SQLAlchemy/releases"
+"Bug Tracker" = "https://github.com/WPSemantix/timbr_python_SQLAlchemy/issues"
+Repository = "https://github.com/WPSemantix/timbr_python_SQLAlchemy"
+Documentation = "https://github.com/WPSemantix/timbr_python_SQLAlchemy#readme"
+
+[project.entry-points."sqlalchemy.dialects"]
+timbr = "pytimbr_sqla.sqlalchemy_timbr:TimbrDialect"
+"timbr.http" = "pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPDialect"
+"timbr.https" = "pytimbr_sqla.sqlalchemy_timbr:TimbrHTTPSDialect"
+
+[tool.setuptools.packages.find]
+include = ["pytimbr_sqla*", "TCLIService*", "thrift*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
+"thrift.transport" = ["*.py"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pytimbr_sqla.__version__"}
+
+[tool.setuptools.exclude-package-data]
+"*" = ["test*", "tests*", "*.pyc", "__pycache__"]

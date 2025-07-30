@@ -54,6 +54,8 @@ coverage.xml
 test/env*
 test/.python-version
 test/.env
+test/run*
+test/*old*
 
 # Translations
 *.mo
