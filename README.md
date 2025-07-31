@@ -138,6 +138,14 @@ This project is a python connector to timbr using SQLAlchemy.
   query = "SHOW CONCEPTS"
   res_obj = conn.execute(query)
   results_headers = [(desc[0], desc[1]) for desc in res_obj.cursor.description]
+
+  # Optional Performance Tuning:
+  # By default, Timbr fetches results in batches of 10,000 rows at a time.
+  # You can increase this batch size for better performance with large datasets.
+  # Note: The maximum batch size is controlled by your Timbr server's 
+  # "TIMBR_RESULTSET_MAX_FETCH_SIZE" configuration setting.
+  res_obj.cursor._arraysize = 20000
+
   results = res_obj.fetchall()
 
   # Print the columns name
