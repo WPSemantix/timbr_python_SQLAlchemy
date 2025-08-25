@@ -39,6 +39,17 @@ This project is a python connector to timbr using SQLAlchemy.
 - Install using pip:
   - `pip install pytimbr-sqla`
 
+- Install with optional LDAP support:
+  - `pip install pytimbr-sqla[ldap]`
+
+## License Information
+This package uses a **dual-licensing approach**:
+
+- **Core functionality**: MIT Licensed (permissive)
+- **Optional LDAP support**: Requires GPL v3.0 compliance if used
+
+**Important**: Only install LDAP support if you can comply with GPL v3.0 terms. Most users don't need LDAP functionality.
+
 ## Sample usage
 - For an example of how to use the Python SQLAlchemy connector for timbr, follow this [example file](examples/example.py)
 - For an example of how to use the Python SQLAlchemy connector with 'PyHive' as async query for timbr, follow this [example file](examples/pyhive_async_example.py)

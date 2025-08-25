@@ -56,13 +56,22 @@ requires-python = ">=3.9"
 dependencies = [
   "future>=0.18.3",
   "python-dateutil>=2.8.2",
-  "ldap3",
   "thrift>=0.16.0",
   "thrift_sasl>=0.4.3",
   "pure-sasl>=0.6.2",
   "sqlalchemy>=1.4.36,<2.0.0",
   "requests_kerberos>=0.12.0",
   "pyhive>=0.7.0"
+]
+
+[project.optional-dependencies]
+ldap = ["ldap3"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "build>=1.2",
 ]
 
 [project.urls]
