@@ -1,6 +1,5 @@
 ﻿future>=0.18.3
 python-dateutil>=2.8.2
-ldap3
 thrift>=0.16.0
 thrift_sasl>=0.4.3
 pure-sasl>=0.6.2

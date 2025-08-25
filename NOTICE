@@ -1,6 +1,22 @@
+NOTICES AND INFORMATION
+========================
+
+This software incorporates components from third parties.
+
 PyHive
 This project includes code from PyHive originally developed by Dropbox and was donated to Apache/Kyuubi in 2024
 
 future
-This project uses the `future` library, which is licensed under the GNU General Public License v2.0 (GPL-2.0). 
-Please review the terms of the GPL-2.0 license to ensure compliance.
+This project uses the `future` library, which contains components licensed under the GNU General Public License v2.0 (GPL-2.0). 
+Please review the terms of the GPL-2.0 license to ensure compliance when using these components.
+
+LICENSING OVERVIEW:
+- Core package: MIT Licensed
+- Optional LDAP support: GPL v3.0 Licensed
+- Some dependencies contain GPL components
+
+COMPLIANCE NOTICE:
+If you install optional LDAP support (pip install pytimbr-sqla[ldap]), 
+you must comply with GPL v3.0 license terms.
+
+For complete license texts, see the 'licenses/' directory.

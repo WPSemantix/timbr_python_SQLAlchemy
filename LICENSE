@@ -22,6 +22,31 @@ SOFTWARE.
 
 ---
 
+THIRD-PARTY DEPENDENCY LICENSES
+
+This software includes dependencies that are licensed under different terms:
+
+1. OPTIONAL LDAP FUNCTIONALITY
+   If you install the optional LDAP dependencies (pip install pytimbr-sqla[ldap]),
+   you will be subject to additional license terms:
+   - ldap3: GNU General Public License v3.0
+   
+   Important: The optional LDAP functionality is GPL-licensed. If you distribute
+   this software with LDAP support enabled, you must comply with GPL v3.0 terms.
+
+2. OTHER DEPENDENCIES
+   - future: Contains some GPL v2.0 components (used for Python 2/3 compatibility)
+   
+   For a complete list of dependency licenses, see the 'licenses/' directory.
+
+COMPLIANCE NOTICE:
+- Core functionality (without LDAP): MIT Licensed
+- With optional LDAP support: Subject to GPL v3.0 terms
+- Users can choose their licensing obligations based on which features they use
+SOFTWARE.
+
+---
+
 Apache License 2.0
 
 Portions of this project are derived from or use dependencies licensed under the Apache License 2.0.
