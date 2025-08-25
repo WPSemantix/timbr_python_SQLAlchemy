@@ -20,6 +20,7 @@ This project is a python connector to timbr using SQLAlchemy.
 - For <b>Linux</b> based machines only install those dependencies first:
   - gcc
   - heimdal-dev
+  - 
   - krb5
   - python-devel
   - python-dev
